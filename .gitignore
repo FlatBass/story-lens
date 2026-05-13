@@ -1,5 +1,11 @@
+# Python
 venv/
+.venv/
 __pycache__/
 *.pyc
 .env
 .ipynb_checkpoints/
+
+# Data files
+shakespeare_rag/data/raw/
+shakespeare_rag/data/processed/
