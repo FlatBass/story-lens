@@ -1,0 +1,11 @@
+# cat > requirements.txt << 'EOF'
+requests
+beautifulsoup4
+nltk
+matplotlib
+wordcloud
+streamlit
+pandas
+plotly
+gutenberg
+# EOF
