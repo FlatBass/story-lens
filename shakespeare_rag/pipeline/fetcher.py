@@ -7,6 +7,11 @@ import os
 import re
 import json
 import time
+import pathlib
+
+_HERE = pathlib.Path(__file__).resolve().parent         # .../shakespeare_rag/pipeline
+_ROOT = _HERE.parent                                    # .../shakespeare_rag
+RAW_DIR = _ROOT / "data" / "raw"
 
 # 작품 목록 [ 제목 : 장르 ]
 SHAKESPEARE_PLAYS = {
@@ -74,7 +79,7 @@ GUTENBERG_DOWNLOADS = {
 
 # 다운로드 함수
 
-def download_complete_works(save_dir="data/raw"):
+def download_complete_works(save_dir=RAW_DIR):
     """구텐베르크 셰익스피어 전집( ID : 100 ) 다운로드"""
     os.makedirs(save_dir, exist_ok=True)
     save_path = os.path.join(save_dir, "shakespeare_complete.txt")
